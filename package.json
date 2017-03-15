@@ -1,0 +1,24 @@
+{
+  "name": "pretty-easy-rgb-to-hex",
+  "version": "0.0.1",
+  "description": "Converts an rgb color to it's corresponding HEX color value",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex.git"
+  },
+  "author": "Ognjen Jevremovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex/issues"
+  },
+  "homepage": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex#readme",
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.8",
+    "mocha": "^3.2.0"
+  }
+}
