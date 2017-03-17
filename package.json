@@ -19,6 +19,10 @@
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.8",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "pretty-easy-data-types": "^1.0.1"
   }
 }
