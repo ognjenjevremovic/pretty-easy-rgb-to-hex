@@ -7,4 +7,8 @@
  * @param {number[]} colors
  * @returns {string}
  */
-export const hexValue = (colors: number[]): string => colors.map(color => color.toString(16).toLocaleUpperCase()).join('');
+export const hexValue = (colors: number[]): string => colors.map(color => {
+    const stringColor = color.toString(16).toLocaleUpperCase();
+
+    return stringColor.length === 1 ? '0' + stringColor : stringColor;
+}).join('');
