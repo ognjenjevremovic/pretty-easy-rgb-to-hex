@@ -1,0 +1,1 @@
+export { getHEX } from './getHEX';
