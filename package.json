@@ -1,21 +1,40 @@
 {
   "name": "pretty-easy-rgb-to-hex",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Converts an rgb color to it's corresponding HEX color value",
+  "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
+  "homepage": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex",
+  "bugs": {
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex/issues",
+    "email": "ognjen.jevremovic@gmail.com"
+  },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex.git"
+  },
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
+  "types": "index.d.ts",
+  "engines": {
+    "node" : ">=1.8"
+  },
+   "scripts": {
     "test": "mocha ./tests/spec.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex.git"
-  },
-  "author": "Ognjen Jevremovic",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex/issues"
-  },
-  "homepage": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex#readme",
+  "keywords": [
+    "pretty-easy-rgb-to-hex",
+    "pretty-easy-*",
+    "pretty-easy",
+    "prettyeasy",
+    "rgb-to-hex",
+    "rgb to hex",
+    "rgb-hex",
+    "rgb hex",
+    "rgb-color-to-hex",
+    "rgb color to hex",
+    "rgb value to hex",
+    "rgb color to hex color"
+  ],
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.8",
