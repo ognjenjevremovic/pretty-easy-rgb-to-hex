@@ -1,5 +1,5 @@
 //  Dependancies
-import { isObject, isString, isNumber } from 'pretty-easy-data-types';
+import { isObject, isString, isNumber } from '.';
 
 
 /**
@@ -14,7 +14,7 @@ import { isObject, isString, isNumber } from 'pretty-easy-data-types';
  */
 export function isRGB(value: any): boolean {
     if(isObject(value)) {
-        if(value.red && value.green && value.blue) {
+        if(isNumber(+value.red) && isNumber(+value.green) && isNumber(+value.blue)) {
             if(
                 (isString(value.red)   || isNumber(value.red))   &&
                 (isString(value.green) || isNumber(value.green)) &&

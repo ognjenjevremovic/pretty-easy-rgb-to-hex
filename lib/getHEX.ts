@@ -29,6 +29,7 @@ export const getHEX: IModule = (...params) => {
         else if(isObject(params[0]) && isRGB(params[0])) colors = extractColors_IRGB(params[0] as IRGB);
         else return error(`Single value passed must be a string representation of a RGB(a) color or an object with { red, green, blue } properties.`);
     }
+
     //  Array of colors
     //  alpha can be included, but it is not taken in the output
     //  as HEX includes 6 characters
