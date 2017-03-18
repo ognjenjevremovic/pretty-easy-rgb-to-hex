@@ -1,4 +1,7 @@
 # pretty-easy-rgb-to-hex
+
+&nbsp;
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status - Travis CI][travis-image]][travis-url]
 [![Build Status - Appveyor][appveyor-image]][appveyor-url]
@@ -6,14 +9,14 @@
 [![Dependancies][dependancy-image]][dependancy-url]
 
 ### *What is pretty-easy-rgb-to-hex?*
-***pretty-easy-rgb-to-hex*** *is a simple NodeJS module for converting an RGB(A) color value to it's corresponding HEX value*.
+***pretty-easy-rgb-to-hex*** *is a simple NodeJS module for converting an RGB(a) color value to it's corresponding HEX value*.
 
 &nbsp;
 
 # Install
 This is a [NodeJS](http://www.node.js) module available through the [npm](http://npmjs.org) registry. Installation is done using the **npm install** command:
 ```sh
-$ npm install pretty-easy-rgb-to-hex
+$ npm install pretty-easy-rgb-to-hex --save
 ```
 
 &nbsp;
@@ -26,20 +29,20 @@ let rgbToHEX = require('pretty-easy-rgb-to-hex');
 &nbsp;
 
 or if you use TypeScript
-```typescript
+```javascript
 import rgbToHEX from 'pretty-easy-rgb-to-hex'
 ```
 &nbsp;
 
 The module returns a function for you to call and supply with an RGB(a) color value that you'd like to transform into its' corresponding HEX value.
-The function returns a String (HEX value, without a hash [#]), or an instance of Error class if the invalid color value was supplied to the function.
+The function returns a String (HEX value, without a hash [#]) or an instance of Error class if the invalid color value was supplied to the function.
 &nbsp;
 
 ***Important:***
  * HEX value returned does NOT include the hash [#] - this is intended!,
  * no matter if alpha is passed or not the resulting HEX value will be 6 characters long - this is due to the nature of valid HEX color values that are either 3 or 6 characters long,
  * HEX value returned is always 6 characters long,
- * HEX color value returned consists of CAPITAL (no lowercase),
+ * HEX color value returned consists of CAPITAL letters (no lowercase letters are returned),
  * there are 4 valid ways of calling the function (see the example code below)
 
 &nbsp;
@@ -59,6 +62,7 @@ The function returns a String (HEX value, without a hash [#]), or an instance of
 //  Example 1. - single string value 
 rgbToHEX('rgb(255, 0, 0)');         //  returns 'FF0000'
 rgbToHEX('rgba(255, 0, 0, 1)');     //  returns 'FF0000'
+rgbToHEX('255 0 0');                //  returns 'FF0000'
 rgbToHEX('255, 0, 0, 1');           //  returns 'FF0000'
 
 //  Example 2. - 3 string values
@@ -76,24 +80,18 @@ rgbToHEX({red:   255, green:   0, blue:  0 , alpha: 60});   //  returns 'FF0000'
 &nbsp;
 
 ### Consider the following
+The module will return an instance of an Error class, if argument passed is not a valid RGB(a) color value, instead of throwing an error and terminating the Node process thus making it more dynamic and usable in production where you depend on the user input.
+
+Having this in mind, I advise you to consider including a utility library, to check the output data type, such as [pretty-easy-data-types](https://www.npmjs.com/package/pretty-easy-data-types).
+
 ```javascript
 /*
-*   The module will return an instance of an Error class,
-*   instead of throwing an error and terminating the process
-*   and thus making it more dynamic and usable for production
-*   where you depend on the user input,
-*   if argument passed is not a valid RGB(a) color value.
-*
-*   Because of this, I advise you to 
-*   consider including a utility library,
-*   to check the output data type, such as
-*             pretty-easy-data-types
-*
-*   https://www.npmjs.com/package/pretty-easy-data-types
+*   Only import the checks you will be using,
+*   instead of including the whole library
 */
 const { 
     isString,       //  check if the value supplied is of type String
-    isError         //  check for instance of Error class
+    isError         //  check for instance of an Error class
 } = require('pretty-easy-data-types');
 const rgbToHEX  = require('pretty-easy-rgb-to-hex');
 
