@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancie
 var assert = require("assert");
-var rgbToHEX = require("..");
+var rgbToHEX = require("../..");
 //  Should return an Error
 var shouldReturnError = 'Should return an instance of Error ->';
 /**
@@ -28,4 +28,4 @@ function invalidRGBValue_returnError(info) {
     });
 }
 exports.invalidRGBValue_returnError = invalidRGBValue_returnError;
-//# sourceMappingURL=invalid.js.map
+//# sourceMappingURL=validate.js.map
