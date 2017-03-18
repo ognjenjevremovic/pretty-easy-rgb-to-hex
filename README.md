@@ -1,7 +1,9 @@
 # pretty-easy-rgb-to-hex
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status - Travis CI][travis-image]][travis-url]
+[![Build Status - Appveyor][appveyor-image]][appveyor-url]
 [![Tests][tests-image]][travis-url]
+[![Dependancies][dependancy-image]][dependancy-url]
 
 ### *What is pretty-easy-rgb-to-hex?*
 ***pretty-easy-rgb-to-hex*** *is a simple NodeJS module for converting an RGB(A) color value to it's corresponding HEX value*.
@@ -67,8 +69,8 @@ rgbToHEX(255, 0, 0);                //  returns 'FF0000'
 
 //  Example 4. - RGB(a) object
 rgbToHEX({red: '255', green: '0', blue: '0'});              //  returns 'FF0000'
-rgbToHEX({red:   255, green:   0, blue: 0  });              //  returns 'FF0000'
-rgbToHEX({red:   255, green:   0, blue: 0  , alpha: 60});   //  returns 'FF0000'
+rgbToHEX({red:   255, green:   0, blue:  0 });              //  returns 'FF0000'
+rgbToHEX({red:   255, green:   0, blue:  0 , alpha: 60});   //  returns 'FF0000'
 ```
 
 &nbsp;
@@ -128,4 +130,8 @@ Licensed under the [MIT](https://github.com/ognjenjevremovic/pretty-easy-rgb-to-
 [npm-url]: https://npmjs.org/package/pretty-easy-rgb-to-hex
 [travis-image]: https://img.shields.io/travis/ognjenjevremovic/pretty-easy-rgb-to-hex/master.svg
 [travis-url]: https://travis-ci.org/ognjenjevremovic/pretty-easy-rgb-to-hex
-[tests-image]: https://img.shields.io/badge/test-passing-green.svg
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/ss17l4nn348x2thb?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/ognjenjevremovic/pretty-easy-rgb-to-hex
+[tests-image]: https://img.shields.io/badge/tests-passing-green.svg
+[dependancy-image]: https://david-dm.org/ognjenjevremovic/pretty-easy-rgb-to-hex/status.svg
+[dependancy-url]: https://david-dm.org/ognjenjevremovic/pretty-easy-rgb-to-hex
