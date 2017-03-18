@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //  Dependancies
-var pretty_easy_data_types_1 = require("pretty-easy-data-types");
+var _1 = require(".");
 /**
  * @description
  *  Check if the value passed is a valid
@@ -13,11 +13,11 @@ var pretty_easy_data_types_1 = require("pretty-easy-data-types");
  * @returns {boolean}
  */
 function isRGB(value) {
-    if (pretty_easy_data_types_1.isObject(value)) {
-        if (value.red && value.green && value.blue) {
-            if ((pretty_easy_data_types_1.isString(value.red) || pretty_easy_data_types_1.isNumber(value.red)) &&
-                (pretty_easy_data_types_1.isString(value.green) || pretty_easy_data_types_1.isNumber(value.green)) &&
-                (pretty_easy_data_types_1.isString(value.blue) || pretty_easy_data_types_1.isNumber(value.blue)))
+    if (_1.isObject(value)) {
+        if (_1.isNumber(+value.red) && _1.isNumber(+value.green) && _1.isNumber(+value.blue)) {
+            if ((_1.isString(value.red) || _1.isNumber(value.red)) &&
+                (_1.isString(value.green) || _1.isNumber(value.green)) &&
+                (_1.isString(value.blue) || _1.isNumber(value.blue)))
                 return true;
             else
                 return false;
