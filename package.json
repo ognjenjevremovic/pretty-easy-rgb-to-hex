@@ -1,6 +1,6 @@
 {
   "name": "pretty-easy-rgb-to-hex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converts an rgb color to it's corresponding HEX color value",
   "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "homepage": "https://github.com/ognjenjevremovic/pretty-easy-rgb-to-hex",
@@ -42,6 +42,6 @@
     "typescript": "^2.2.1"
   },
   "dependencies": {
-    "pretty-easy-data-types": "^1.0.1"
+    "pretty-easy-data-types": "^1.0.2"
   }
 }

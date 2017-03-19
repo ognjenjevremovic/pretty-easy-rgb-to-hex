@@ -19,7 +19,7 @@ import { hexValue } from './hexValue';
  * @param {any} params
  * @returns
  */
-export const getHEX: IModule = (...params) => {
+export const rgbToHex: IModule = (...params) => {
     //  Initialize the variables
     let colors  : number[];
 

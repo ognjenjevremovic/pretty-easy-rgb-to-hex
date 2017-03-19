@@ -1,1 +1,1 @@
-export { getHEX } from './getHEX';
+export { rgbToHex } from './rgb-hex';

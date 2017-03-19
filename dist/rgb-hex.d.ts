@@ -9,4 +9,4 @@ import { IModule } from './interfaces';
  * @param {any} params
  * @returns
  */
-export declare const getHEX: IModule;
+export declare const rgbToHex: IModule;

@@ -15,7 +15,7 @@ var hexValue_1 = require("./hexValue");
  * @param {any} params
  * @returns
  */
-exports.getHEX = function () {
+exports.rgbToHex = function () {
     var params = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         params[_i] = arguments[_i];
@@ -41,4 +41,4 @@ exports.getHEX = function () {
     //  Return HEX value
     return hexValue_1.hexValue(colors);
 };
-//# sourceMappingURL=getHEX.js.map
+//# sourceMappingURL=rgb-hex.js.map
