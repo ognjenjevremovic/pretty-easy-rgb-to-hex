@@ -19,6 +19,7 @@ const shouldReturnString: string = 'Should return a HEX color string ->';
  * @param {string} info
  * @param {string} value
  * @param {number[]} equalityCheck
+ * @returns {*}
  */
 export function validRGBValue_returnsString(info: string, equalityCheck: string, ...value: Array<any>): void {
     it(`${shouldReturnString} ${info}`, () =>  assert.equal(rgbToHEX(...value), equalityCheck));

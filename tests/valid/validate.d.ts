@@ -7,5 +7,6 @@
  * @param {string} info
  * @param {string} value
  * @param {number[]} equalityCheck
+ * @returns {*}
  */
 export declare function validRGBValue_returnsString(info: string, equalityCheck: string, ...value: Array<any>): void;

@@ -14,6 +14,7 @@ var shouldReturnString = 'Should return a HEX color string ->';
  * @param {string} info
  * @param {string} value
  * @param {number[]} equalityCheck
+ * @returns {*}
  */
 function validRGBValue_returnsString(info, equalityCheck) {
     var value = [];

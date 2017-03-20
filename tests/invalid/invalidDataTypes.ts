@@ -47,3 +47,13 @@ export function errorObjectValue() {
         invalidRGBValue_returnError('from error object', new Error('invalid value'));
     });
 }
+
+//  Array
+export function arrayValue() {
+    describe('Array', () => {
+        invalidRGBValue_returnError('from Array', []);
+        invalidRGBValue_returnError('from Array', [   '',   2,  34 ]);
+        invalidRGBValue_returnError('from Array', [  255, 132,  45 ]);
+        invalidRGBValue_returnError('from Array', [ '50',  60,   0 ]);
+    });
+}

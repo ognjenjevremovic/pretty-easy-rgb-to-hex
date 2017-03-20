@@ -8,12 +8,13 @@ var object_1 = require("./object");
 //  Invalid data types
 function dataTypes() {
     describe('Value passed is of invalid data type', function () {
-        invalidDataTypes_1.undefinedValue(),
-            invalidDataTypes_1.nullValue(),
-            invalidDataTypes_1.booleanValue(),
-            invalidDataTypes_1.functionValue(),
-            invalidDataTypes_1.dateObjectValue(),
-            invalidDataTypes_1.errorObjectValue();
+        invalidDataTypes_1.undefinedValue();
+        invalidDataTypes_1.nullValue();
+        invalidDataTypes_1.booleanValue();
+        invalidDataTypes_1.functionValue();
+        invalidDataTypes_1.dateObjectValue();
+        invalidDataTypes_1.errorObjectValue();
+        invalidDataTypes_1.arrayValue();
     });
 }
 exports.dataTypes = dataTypes;

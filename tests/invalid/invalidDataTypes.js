@@ -48,4 +48,14 @@ function errorObjectValue() {
     });
 }
 exports.errorObjectValue = errorObjectValue;
+//  Array
+function arrayValue() {
+    describe('Array', function () {
+        validate_1.invalidRGBValue_returnError('from Array', []);
+        validate_1.invalidRGBValue_returnError('from Array', ['', 2, 34]);
+        validate_1.invalidRGBValue_returnError('from Array', [255, 132, 45]);
+        validate_1.invalidRGBValue_returnError('from Array', ['50', 60, 0]);
+    });
+}
+exports.arrayValue = arrayValue;
 //# sourceMappingURL=invalidDataTypes.js.map
