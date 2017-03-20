@@ -30,7 +30,7 @@ let rgbToHEX = require('pretty-easy-rgb-to-hex');
 
 or if you use TypeScript
 ```javascript
-import rgbToHEX from 'pretty-easy-rgb-to-hex'
+import * as rgbToHEX from 'pretty-easy-rgb-to-hex';
 ```
 &nbsp;
 
@@ -38,7 +38,7 @@ The module returns a function for you to call and supply with an RGB(a) color va
 The function returns a String (HEX value, without a hash [#]) or an instance of Error class if the invalid color value was supplied to the function.
 &nbsp;
 
-***Important:***
+##### ***Important :***
  * HEX value returned does NOT include the hash [#] - this is intended!,
  * no matter if alpha is passed or not the resulting HEX value will be 6 characters long - this is due to the nature of valid HEX color values that are either 3 or 6 characters long,
  * HEX value returned is always 6 characters long,
@@ -100,10 +100,16 @@ const rgbToHEX  = require('pretty-easy-rgb-to-hex');
 //  without causing your process to break
 const convertToHex = rgbToHEX('this is an invalid value!');
 
-//  Check if the value returned is of type String
-//  if it is, prepend the hash on the HEX value
-//  else it is an instance of an Error class
-//  handle it somehow
+/*
+*   After converting the RGB(a) color to its' corresponding HEX value
+*   you should perform the check on the value returned and see
+*   if the conversion was successful.
+*
+*   If the value returned is of type String the conversion was successful
+*   and in this example we're going to prepend the hash symbol [#]
+*   else it is an instance of an Error class
+*   and we're just going to log it to the console
+*/
 const hexColor = isString(convertToHex) ?
     `#${convertToHex}` :
     convertToHex;
